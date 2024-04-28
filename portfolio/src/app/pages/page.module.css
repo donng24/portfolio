@@ -1,0 +1,262 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+.main {
+  padding: 6rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 6rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #777;
+}
+
+.about,
+.projects,
+.skills,
+.contact {
+  margin-bottom: 4rem;
+}
+
+.about{
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutMeTitle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.aboutMeP{
+  text-indent: 20px; 
+  max-width: 600px; 
+  margin: 0 auto; 
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.project {
+  flex: 1 1 300px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.project h3 {
+  margin-bottom: 0.5rem;
+}
+
+.skills{
+  display: flex;
+  flex-direction: column;
+  
+}
+.skillsh2{
+  margin-bottom: 2rem;
+}
+
+.skillList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skillList li {
+  display: inline-block;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+  background-color: #363636;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.contact {
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactMe{
+  margin-bottom: 2rem;
+  text-decoration: underline;
+}
+
+.contactInfo{
+  font-size: larger;
+  margin: 0.5rem;
+}
+
+.linkedinLink {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 8px; /* Adjust padding as needed */
+  border-radius: 8px; /* Adjust border radius as needed */
+  background-color: #0077b5; /* LinkedIn blue color */
+}
+
+.linkedinIcon {
+  width: 24px; /* Adjust icon size */
+  height: 24px;
+  fill: #fff; /* Icon color */
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+}
+
+.pictureContainer {
+  text-align: center;
+  opacity: 0; 
+  transition: opacity 1s ease; 
+}
+
+.picture {
+  width: 200px; 
+  height: auto; 
+}
+
+.tabImage{
+  width: 8rem;
+  height: 8rem;
+
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.typingContainer {
+  text-align: center;
+  height: 50%; 
+  background: rgb(36, 36, 36);
+  border-radius: 5px;
+}
+
+.typingText {
+  overflow: hidden;
+  white-space: nowrap;
+  letter-spacing: 2px;
+  font-size: 4rem;
+  width: 0;
+  margin: 0 auto;
+  margin-top: 1rem;
+  margin-bottom: 40rem;
+  animation: typewriter 1.5s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+.typingTexth3{
+  padding: 2rem;
+  font-size: 2rem;
+  font-weight: lighter;
+  color: #888888;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 24em;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+
+.parallax {
+  perspective: 1px;
+  overflow-x: hidden;
+  overflow-y: hidden; 
+  padding-right: 17px;
+}
+
+.parallax section {
+  position: relative;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+}
+
+.parallax section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  transform-origin: top center;
+  transform: translateZ(-1px) scale(2);
+}
+
+.loader {
+  width: 84px;
+  height: 84px;
+  position: relative;
+}
+.loader:before , .loader:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width:64px;
+  height: 64px;
+  border-radius: 50%;
+  background:#fff;
+  transform: translate(-50% , -100%)  scale(0);
+  animation: push 2s infinite linear;
+}
+.loader:after {
+  animation-delay: 1s;
+}
+@keyframes push {
+    0% , 50%{ transform: translate(-50% , 0%)  scale(1) }
+  100% { transform: translate(-50%, -100%) scale(0) }
+}
+
+
+.footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #363636;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+
